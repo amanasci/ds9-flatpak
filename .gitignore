@@ -1,0 +1,24 @@
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+
+# Editor directories and files #
+###############################
+.idea/
+.vscode/
+
+# Logs and temporary files #
+#############################
+*.log
+*.tmp
+
+# Compiled files and build results #
+####################################
+*.o
+*.obj
+*.so
+*.exe
+*.dll
+build/
+dist/

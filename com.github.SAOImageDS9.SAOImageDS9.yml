@@ -1,0 +1,23 @@
+app-id: com.github.SAOImageDS9.SAOImageDS9
+runtime: org.freedesktop.Platform
+runtime-version: '22.08'
+sdk: org.freedesktop.Sdk
+command: ds9
+modules:
+  - name: ds9
+    buildsystem: simple
+    build-commands:
+      - sed -i 's/tclsh/$(TCLSH_PROG)/' ds9/make.include  # See: https://github.com/SAOImageDS9/SAOImageDS9/issues/134
+      - ./unix/configure
+      - make
+      - install -m 755 -D bin/ds9 /app/bin/ds9
+      - ls -R /app
+    sources:
+      - type: git
+        url: https://github.com/SAOImageDS9/SAOImageDS9.git
+        tag: v8.6
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --share=network
+  - --filesystem=host
