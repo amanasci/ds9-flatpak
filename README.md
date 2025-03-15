@@ -28,3 +28,27 @@ $ flatpak-builder --user --install --force-clean build_dir com.github.SAOImageDS
 # Run the package
 $ flatpak run com.github.SAOImageDS9.SAOImageDS9
 ```
+
+## Desktop Entry
+
+```bash
+# Create .desktop file 
+nano ~/.local/share/applications/com.github.SAOImageDS9.SAOImageDS9.desktop
+
+# Add following content and save
+[Desktop Entry]
+Name=SAOImage DS9
+Comment=Astronomical Imaging and Data Visualization Tool
+Exec=flatpak run com.github.SAOImageDS9.SAOImageDS9
+Icon=com.github.SAOImageDS9.SAOImageDS9
+Terminal=false
+Type=Application
+Categories=Education;Science;Astronomy;
+
+
+#Refresh Desktop database
+
+update-desktop-database ~/.local/share/applications
+
+
+```
