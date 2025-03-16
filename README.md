@@ -1,3 +1,5 @@
+# DS9 FLATPAK
+
 This repo contains recipie to install DS9 as a flatpak.
 
 This will be helpful for people on rolling release but still want stability when it comes to work.
